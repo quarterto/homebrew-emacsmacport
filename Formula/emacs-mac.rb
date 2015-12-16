@@ -97,6 +97,12 @@ class EmacsMac < Formula
     # Don't cause ctags clash.
     do_not_install_ctags
   end
+  
+  # 24bit colours for iTerm
+  patch do
+    sha256 "fa8c6ad8b8908ca9cac34a5da6d86a0048bb36e833a903c1e072d4b6413273f6"
+    url "https://gist.githubusercontent.com/quarterto/fbcd2c4c2e14894e18e2/raw/ddd5baa415aa99f94913759c74c455cbc75fc7de/emacs-24bit.diff"
+  end
 
   test do
     system "emacs", "--batch"
